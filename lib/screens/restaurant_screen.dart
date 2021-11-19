@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_delivery_ui/models/restaurant.dart';
+import 'package:flutter_food_delivery_ui/widgets/raiting_stars.dart';
 
 class RestaurantScreen extends StatefulWidget {
   const RestaurantScreen({Key key, this.restaurant}) : super(key: key);
@@ -50,7 +51,78 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                     ),
                   ],
                 ),
-              )
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      widget.restaurant.name,
+                      style: const TextStyle(
+                          fontSize: 22.0, fontWeight: FontWeight.w600),
+                    ),
+                    const Text(
+                      '0.2 miles away',
+                      style: TextStyle(fontSize: 18.0),
+                    ),
+                  ],
+                ),
+                RaitingStars(widget.restaurant.rating),
+                const SizedBox(height: 6.0),
+                Text(
+                  widget.restaurant.address,
+                  style: const TextStyle(fontSize: 18.0),
+                )
+              ],
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              TextButton(
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all(
+                    const EdgeInsets.symmetric(horizontal: 30.0),
+                  ),
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  backgroundColor:
+                      MaterialStateProperty.all(Theme.of(context).primaryColor),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Reviews',
+                  style: TextStyle(color: Colors.white, fontSize: 20.0),
+                ),
+              ),
+              TextButton(
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all(
+                    const EdgeInsets.symmetric(horizontal: 30.0),
+                  ),
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  backgroundColor:
+                      MaterialStateProperty.all(Theme.of(context).primaryColor),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Contact',
+                  style: TextStyle(color: Colors.white, fontSize: 20.0),
+                ),
+              ),
             ],
           )
         ],
