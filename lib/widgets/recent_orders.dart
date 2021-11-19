@@ -75,7 +75,7 @@ class RecentOrders extends StatelessWidget {
               color: Colors.white,
               onPressed: () {},
             ),
-          )
+          ),
         ],
       ),
     );
