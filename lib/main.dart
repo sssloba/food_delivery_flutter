@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.grey[50],
-        primaryColor: Colors.deepOrangeAccent,
+        primaryColor: Colors.deepOrangeAccent, //primary color doesn't work!!!
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.deepOrangeAccent,
         ),
