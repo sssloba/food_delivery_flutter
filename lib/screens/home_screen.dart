@@ -7,7 +7,7 @@ import 'package:flutter_food_delivery_ui/widgets/raiting_stars.dart';
 import 'package:flutter_food_delivery_ui/widgets/recent_orders.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15.0),
-                border: Border.all(width: 1.0, color: Colors.grey[200])),
+                border: Border.all(width: 1.0, color: Colors.grey[200]!)),
             child: Row(
               children: <Widget>[
                 ClipRRect(

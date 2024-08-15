@@ -4,7 +4,10 @@ import 'package:flutter_food_delivery_ui/models/restaurant.dart';
 import 'package:flutter_food_delivery_ui/widgets/raiting_stars.dart';
 
 class RestaurantScreen extends StatefulWidget {
-  const RestaurantScreen({Key key, this.restaurant}) : super(key: key);
+  const RestaurantScreen({
+    required this.restaurant,
+    super.key,
+  });
   final Restaurant restaurant;
 
   @override

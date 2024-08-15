@@ -3,7 +3,7 @@ import 'package:flutter_food_delivery_ui/data/data.dart';
 import 'package:flutter_food_delivery_ui/models/order.dart';
 
 class RecentOrders extends StatelessWidget {
-  const RecentOrders({Key key}) : super(key: key);
+  const RecentOrders({super.key});
 
   _buildRecentOrder(BuildContext context, Order order) {
     return Container(
@@ -12,7 +12,7 @@ class RecentOrders extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15.0),
-        border: Border.all(width: 1.0, color: Colors.grey[200]),
+        border: Border.all(width: 1.0, color: Colors.grey[200]!),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

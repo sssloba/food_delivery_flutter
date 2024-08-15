@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RaitingStars extends StatelessWidget {
-  const RaitingStars(this.raitng, {Key key}) : super(key: key);
+  const RaitingStars(this.raitng, {super.key});
 
   final int raitng;
 

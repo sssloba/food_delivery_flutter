@@ -3,7 +3,7 @@ import 'package:flutter_food_delivery_ui/data/data.dart';
 import 'package:flutter_food_delivery_ui/models/order.dart';
 
 class CartScreen extends StatefulWidget {
-  const CartScreen({Key key}) : super(key: key);
+  const CartScreen({super.key});
 
   @override
   _CartScreenState createState() => _CartScreenState();
