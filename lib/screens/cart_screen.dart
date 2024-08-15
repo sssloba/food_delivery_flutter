@@ -6,10 +6,10 @@ class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
 
   @override
-  _CartScreenState createState() => _CartScreenState();
+  CartScreenState createState() => CartScreenState();
 }
 
-class _CartScreenState extends State<CartScreen> {
+class CartScreenState extends State<CartScreen> {
   _buildCartItem(Order order) {
     return Container(
       padding: const EdgeInsets.all(20.0),
@@ -135,9 +135,9 @@ class _CartScreenState extends State<CartScreen> {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: <Widget>[
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const <Widget>[
+                  children: <Widget>[
                     Text(
                       'Estimated delivery Time',
                       style: TextStyle(

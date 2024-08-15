@@ -11,10 +11,10 @@ class RestaurantScreen extends StatefulWidget {
   final Restaurant restaurant;
 
   @override
-  _RestaurantScreenState createState() => _RestaurantScreenState();
+  RestaurantScreenState createState() => RestaurantScreenState();
 }
 
-class _RestaurantScreenState extends State<RestaurantScreen> {
+class RestaurantScreenState extends State<RestaurantScreen> {
   _buildMenuItem(Food menuItem) {
     return Center(
       child: Stack(
@@ -167,16 +167,16 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
             children: <Widget>[
               TextButton(
                 style: ButtonStyle(
-                  padding: MaterialStateProperty.all(
+                  padding: WidgetStateProperty.all(
                     const EdgeInsets.symmetric(horizontal: 30.0),
                   ),
-                  shape: MaterialStateProperty.all(
+                  shape: WidgetStateProperty.all(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
                   backgroundColor:
-                      MaterialStateProperty.all(Theme.of(context).primaryColor),
+                      WidgetStateProperty.all(Theme.of(context).primaryColor),
                 ),
                 onPressed: () {},
                 child: const Text(
@@ -186,16 +186,16 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
               ),
               TextButton(
                 style: ButtonStyle(
-                  padding: MaterialStateProperty.all(
+                  padding: WidgetStateProperty.all(
                     const EdgeInsets.symmetric(horizontal: 30.0),
                   ),
-                  shape: MaterialStateProperty.all(
+                  shape: WidgetStateProperty.all(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
                   backgroundColor:
-                      MaterialStateProperty.all(Theme.of(context).primaryColor),
+                      WidgetStateProperty.all(Theme.of(context).primaryColor),
                 ),
                 onPressed: () {},
                 child: const Text(
