@@ -5,6 +5,7 @@ import 'package:flutter_food_delivery_ui/screens/cart_screen.dart';
 import 'package:flutter_food_delivery_ui/screens/restaurant_screen.dart';
 import 'package:flutter_food_delivery_ui/widgets/raiting_stars.dart';
 import 'package:flutter_food_delivery_ui/widgets/recent_orders.dart';
+import 'package:flutter_food_delivery_ui/widgets/search_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -110,33 +111,7 @@ class HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: ListView(physics: const BouncingScrollPhysics(), children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: TextField(
-            decoration: InputDecoration(
-                contentPadding: const EdgeInsets.symmetric(vertical: 15.0),
-                fillColor: Colors.white,
-                filled: true,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                  borderSide: const BorderSide(width: 0.8),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                  borderSide: BorderSide(
-                      width: 0.8, color: Theme.of(context).primaryColor),
-                ),
-                hintText: 'Search Food or Restaurant',
-                prefixIcon: const Icon(
-                  Icons.search,
-                  size: 30.0,
-                ),
-                suffixIcon: IconButton(
-                  icon: const Icon(Icons.clear),
-                  onPressed: () {},
-                )),
-          ),
-        ),
+        const OrdersSearchBar(),
         const RecentOrders(),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
