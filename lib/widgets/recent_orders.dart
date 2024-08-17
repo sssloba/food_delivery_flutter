@@ -32,7 +32,7 @@ class RecentOrders extends StatelessWidget {
                   child: Container(
                     margin: const EdgeInsets.all(12.0),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
@@ -41,14 +41,12 @@ class RecentOrders extends StatelessWidget {
                               fontSize: 18.0, fontWeight: FontWeight.bold),
                           overflow: TextOverflow.ellipsis,
                         ),
-                        const SizedBox(height: 4.0),
                         Text(
                           order.restaurant.name,
                           style: const TextStyle(
                               fontSize: 16.0, fontWeight: FontWeight.w600),
                           overflow: TextOverflow.ellipsis,
                         ),
-                        const SizedBox(height: 4.0),
                         Text(
                           order.date,
                           style: const TextStyle(
