@@ -4,7 +4,7 @@ import 'package:flutter_food_delivery_ui/data/data.dart';
 class CartButton extends StatelessWidget {
   const CartButton({
     super.key,
-    required this.onTap,
+    this.onTap,
   });
 
   final Function()? onTap;

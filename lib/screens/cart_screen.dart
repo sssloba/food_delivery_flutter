@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_delivery_ui/data/data.dart';
 import 'package:flutter_food_delivery_ui/models/order.dart';
+import 'package:flutter_food_delivery_ui/widgets/cart_button.dart';
 import 'package:flutter_food_delivery_ui/widgets/cart_item.dart';
 
 class CartScreen extends StatefulWidget {
@@ -21,7 +22,8 @@ class CartScreenState extends State<CartScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Cart (${currentUser.cart.length})'),
+        title: const Text('Cart'),
+        actions: const [CartButton()],
       ),
       body: ListView.separated(
         physics: const BouncingScrollPhysics(),
